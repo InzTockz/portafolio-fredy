@@ -1,0 +1,24 @@
+#themes-menu{
+  display: none;
+}
+
+#themes-menu.open{
+  display: block;
+}
+
+/* Clase para el modo claro */
+.bg-light-navbar {
+  background-color: rgba(255, 255, 255, 0.9); /* Blanco suave */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+/* Clase para el modo oscuro */
+.bg-dark-navbar {
+  background-color: rgba(49, 49, 83, 0.8); /* Azul plomo oscuro */
+  box-shadow: 0 2px 4px rgba(49, 49, 83, 0.8); /* Sombra más marcada */
+}
+
+/* Efecto de desenfoque */
+.backdrop-blur {
+  backdrop-filter: blur(5px);
+}

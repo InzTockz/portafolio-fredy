@@ -3,13 +3,49 @@ dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(
 </div>
 
 <header class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2">
-  <nav
-    class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center bg-gray-300">
-    <a class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500" href="#">Experiencia</a>
-    <a class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500" href="#">Proyectos</a>
-    <a class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500" href="#">Sobre
+  <nav class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center backdrop-blur-md">
+    <a class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500"
+      href="#experiencia">Experiencia</a>
+    <a class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500"
+      href="#proyectos">Proyectos</a>
+    <a class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500" href="#sobre-mi">Sobre
       mi</a>
     <a class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500" href="#">Contacto</a>
+    <div class="relative ml-1 mr-1"> <button id="theme-toggle-btn" (click)="toggleMenu($event)"
+        class="appearance-none border-none flex hover:scale-125 transition"
+        > <span class="sr-only" >Elige el
+          tema</span> <svg id="light" class="theme-toggle-icon size-5 transition-all"
+          width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+          stroke-linecap="round" stroke-linejoin="round" style="scale: 0;">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
+          <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+        </svg> <svg id="dark" class="theme-toggle-icon absolute size-5 transition-all" data-astro-cid-x3pjskd3=""
+          width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+          stroke-linecap="round" stroke-linejoin="round" style="scale: 1;">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+        </svg> <svg id="system" class="theme-toggle-icon absolute size-5 transition-all" data-astro-cid-x3pjskd3=""
+          width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+          stroke-linecap="round" stroke-linejoin="round" style="scale: 0;">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M3 5a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1v-10z"></path>
+          <path d="M7 20h10"></path>
+          <path d="M9 16v4"></path>
+          <path d="M15 16v4"></path>
+        </svg> </button>
+      <div #themesMenu id="themes-menu"
+        class="absolute hidden scale-80 top-8 right-0 text-sm p-1 min-w-[8rem] rounded-md border border-gray-100 bg-white/90 dark:bg-gray-900/90 dark:border-gray-500/20 shadow-[0_3px_10px_rgb(0,0,0,0.2)] backdrop-blur-md">
+        <ul>
+          <li
+            class="themes-menu-option px-2 py-1.5 cursor-default hover:bg-neutral-400/40 dark:hover:bg-gray-500/50 rounded-sm" (click)="setTheme('light')"> Light </li>
+          <li
+            class="themes-menu-option px-2 py-1.5 cursor-default hover:bg-neutral-400/40 dark:hover:bg-gray-500/50 rounded-sm" (click)="setTheme('dark')"> Dark </li>
+          <li
+            class="themes-menu-option px-2 py-1.5 cursor-default hover:bg-neutral-400/40 dark:hover:bg-gray-500/50 rounded-sm" (click)="setTheme('system')"> System </li>
+        </ul>
+      </div>
+    </div>
   </nav>
 </header>
 
@@ -138,7 +174,7 @@ dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(
             <div
               class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
               <img alt="Matriz de Articulos Battilana"
-                class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+                class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:group-hover:scale-105"
                 loading="lazy" src="batti-articulos.jpg">
             </div>
           </div>
@@ -150,6 +186,7 @@ dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(
                 <li> <span class="flex gap-x-2 rounded-full text-xs bg-black text-white py-1 px-2 "> <svg class="size-4"
                       xmlns="http://www.w3.org/2000/svg" width="256" height="256" preserveAspectRatio="xMidYMid"
                       viewBox="0 0 256 256">
+
                       <defs>
                         <linearGradient id="c" x1="55.633%" x2="83.228%" y1="56.385%" y2="96.08%">
                           <stop offset="0%" stop-color="#FFF"></stop>
@@ -161,37 +198,58 @@ dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(
                         </linearGradient>
                         <circle id="a" cx="128" cy="128" r="128"></circle>
                       </defs>
-                      <mask id="b" fill="#fff">
-                        <use xlink:href="#a"></use>
-                      </mask>
-                      <g mask="url(#b)">
-                        <circle cx="128" cy="128" r="128"></circle>
-                        <path fill="url(#c)"
-                          d="M212.634 224.028 98.335 76.8H76.8v102.357h17.228V98.68L199.11 234.446a128.433 128.433 0 0 0 13.524-10.418Z">
-                        </path>
-                        <path fill="url(#d)" d="M163.556 76.8h17.067v102.4h-17.067z"></path>
-                      </g>
-                    </svg> Next.js </span> </li>
+                      <path
+                        d="M83 267s-14 8 9 11c27 3 41 2 71-3 0 0 8 5 19 9-67 29-153-2-99-17M74 230s-15 11 8 13c29 3 52 3 92-4 0 0 6 5 15 8-82 24-173 2-115-17"
+                        fill="#5382A1" />
+                      <path d="M144 166c17 19-4 36-4 36s42-22 22-49c-18-26-32-38 44-82 0 0-119 29-62 95"
+                        fill="#E76F00" />
+                      <path
+                        d="M233 295s10 8-10 15c-39 12-163 15-197 0-12-5 11-13 18-14l12-2c-14-9-89 19-38 28 138 22 251-10 215-27M89 190s-63 15-22 21c17 2 51 2 83-1 26-2 52-7 52-7l-16 9c-64 16-187 8-151-9 30-14 54-13 54-13M202 253c64-33 34-66 13-61l-7 2s2-3 6-5c41-14 73 43-14 66l2-2"
+                        fill="#5382A1" />
+                      <path d="M162 0s36 36-34 91c-56 45-12 70 0 99-32-30-56-56-40-80 23-35 89-53 74-110"
+                        fill="#E76F00" />
+                      <path d="M95 345c62 4 158-3 160-32 0 0-4 11-51 20-53 10-119 9-158 2 0 0 8 7 49 10"
+                        fill="#5382A1" />
+                    </svg> Java </span> </li>
                 <li> <span class="flex gap-x-2 rounded-full text-xs bg-[#003159] text-white py-1 px-2 "> <svg
-                      class="size-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 54 33">
+                      class="size-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 260 270">
                       <g clip-path="url(#a)">
-                        <path fill="#38bdf8" fill-rule="evenodd"
-                          d="M27 0c-7.2 0-11.7 3.6-13.5 10.8 2.7-3.6 5.85-4.95 9.45-4.05 2.054.513 3.522 2.004 5.147 3.653C30.744 13.09 33.808 16.2 40.5 16.2c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C36.756 3.11 33.692 0 27 0zM13.5 16.2C6.3 16.2 1.8 19.8 0 27c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C17.244 29.29 20.308 32.4 27 32.4c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C23.256 19.31 20.192 16.2 13.5 16.2z"
-                          clip-rule="evenodd"></path>
+                        <mask id="b" width="242" height="256" x="0" y="0" maskUnits="userSpaceOnUse"
+                          style="mask-type:luminance">
+                          <path fill="#fff" d="M0 0h242v256H0V0Z" />
+                        </mask>
+                        <g mask="url(#b)">
+                          <path fill="url(#c)"
+                            d="m241 43-9 136L149 0l92 43Zm-58 176-62 36-63-36 12-31h101l12 31ZM121 68l32 80H88l33-80ZM9 179 0 43 92 0 9 179Z" />
+                          <path fill="url(#d)"
+                            d="m241 43-9 136L149 0l92 43Zm-58 176-62 36-63-36 12-31h101l12 31ZM121 68l32 80H88l33-80ZM9 179 0 43 92 0 9 179Z" />
+                        </g>
                       </g>
                       <defs>
+                        <linearGradient id="c" x1="53.2" x2="245" y1="231.9" y2="140.7" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#E40035" />
+                          <stop offset=".2" stop-color="#F60A48" />
+                          <stop offset=".4" stop-color="#F20755" />
+                          <stop offset=".5" stop-color="#DC087D" />
+                          <stop offset=".7" stop-color="#9717E7" />
+                          <stop offset="1" stop-color="#6C00F5" />
+                        </linearGradient>
+                        <linearGradient id="d" x1="44.5" x2="170" y1="30.7" y2="174" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#FF31D9" />
+                          <stop offset="1" stop-color="#FF5BE1" stop-opacity="0" />
+                        </linearGradient>
                         <clipPath id="a">
-                          <path fill="#fff" d="M0 0h54v32.4H0z"></path>
+                          <path fill="#fff" d="M0 0h242v256H0z" />
                         </clipPath>
                       </defs>
-                    </svg> Tailwind CSS </span> </li>
+                    </svg> Angular </span> </li>
               </ul>
               <div class="mt-2 text-gray-700 dark:text-gray-400">Matriz que se encarga de gestionar la creacion de
                 nuevos ingresos o articulos,
                 generando reportes via pdf o email. Creado desde cero con Java y Angular</div>
               <footer class="flex items-end justify-start mt-4 gap-x-4"> <a target="_blank"
                   href="https://github.com/pheralb/svgl" role="link"
-                  class="inline-flex bg-gray-100 text-gray-800 border-gray-300 items-center justify-center gap-2 px-3 py-2 space-x-2 text-base transition dark:text-white dark:bg-gray-800 border dark:border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black">
+                  class="hidden inline-flex bg-gray-100 text-gray-800 border-gray-300 items-center justify-center gap-2 px-3 py-2 space-x-2 text-base transition dark:text-white dark:bg-gray-800 border dark:border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black">
                   <svg class="size-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                     stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -201,7 +259,7 @@ dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(
                   </svg>
                   Code
                 </a> <a target="_blank" href="https://svgl.vercel.app/" role="link"
-                  class="inline-flex bg-gray-100 text-gray-800 border-gray-300 items-center justify-center gap-2 px-3 py-2 space-x-2 text-base transition dark:text-white dark:bg-gray-800 border dark:border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black">
+                  class="hidden inline-flex bg-gray-100 text-gray-800 border-gray-300 items-center justify-center gap-2 px-3 py-2 space-x-2 text-base transition dark:text-white dark:bg-gray-800 border dark:border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black">
                   <svg class="size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
@@ -216,12 +274,13 @@ dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(
           <div class="w-full md:w-1/2">
             <div
               class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-              <img alt="Recién llegado vs 5 años en Nueva Zelanda"
+              <img alt=""
                 class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
                 loading="lazy" src="/projects/adventjs.webp">
             </div>
           </div>
-          <div class="w-full md:w-1/2 md:max-w-lg">
+          <!-- Pequeño hidden para ocultar lo que aun no se sabe que agregar-->
+          <div class="hidden w-full md:w-1/2 md:max-w-lg">
             <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100"> AdventJS - Retos de programación con
               JavaScript y TypeScript </h3>
             <div class="flex flex-wrap mt-2">
@@ -265,7 +324,8 @@ dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(
                       </defs>
                     </svg> Tailwind CSS </span> </li>
               </ul>
-              <div class="mt-2 text-gray-700 dark:text-gray-400">Plataforma gratuita con retos de programación. Más de 1
+              <div class="mt-2 text-gray-700 dark:text-gray-400">Plataforma gratuita con retos de programación. Más de
+                1
                 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind
                 CSS.</div>
               <footer class="flex items-end justify-start mt-4 gap-x-4"> <a target="_blank" href="https://adventjs.dev"
@@ -298,23 +358,23 @@ dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(
       <article class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row">
         <div
           class="[&amp;>p]:mb-4 [&amp;>p>strong]:text-yellow-500 dark:[&amp;>p>strong]:text-yellow-100 [&amp;>p>strong]:font-normal [&amp;>p>strong]:font-mono text-pretty order-2 md:order-1">
-          <p>
-            Me llamo Miguel Ángel pero mis amigos me llaman midu. Empecé en la
-            programación con un Amstrad, tenía 10 años. Actualmente estoy <strong>liderando equipos de desarrollo en
-              multinacionales</strong>.
+          <p
+            class="text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300">
+            Me llamo Fredy Hurtado. Empecé en la
+            programación con un lenguaje Delphi por juego cuando tenía 15 años. La cual por motivos economicos no pude
+            seguir la carrera de desarrollo en si pero pasando el tiempo a mis
+            19 años decidi emprender la carreara de Mantenimiento de equipos de computo para luego de autosustentarme y
+            empezar a estudiar la carrera de <strong>Computacion e Informatica en
+              Cibertec</strong> donde aprendi Java, C#, Base de Datos Relacionales y No relacionales junto con Angular.
           </p>
-          <p>
-            Algunos de mis éxitos incluyen <strong>colaborar con Mozilla para el desarrollo de las primeras apps en su
-              sistema FirefoxOS</strong>. Aunque hoy está desaparecido fue un gran avance en el mundo del
-            desarrollo web.
+          <br>
+          <p
+            class="text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300">
+            Como developer FullStack, <strong>cuento con una experiencia solida para
+              cualquier tipo de entorno y trabajo en equipo aplicando los principios solidos en patrones de diseño y
+              arquitectura limpia.</strong>
           </p>
-          <p>
-            Como creador de contenido, <strong>cuento con el canal de habla hispana más visto del mundo en la
-              categoría de <em class="italic">Software &amp; Game Development</em> en Twitch</strong>. Mi objetivo es
-            mejorar la empleabilidad de la comunidad hispana y el
-            acceso a contenido de calidad.
-          </p>
-        </div> <img width="200" height="200" src="perfil-test.jpg" alt="Miguel Ángel"
+        </div> <img width="200" height="200" src="perfil-test.jpg" alt="Fredy"
           class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20 "
           style="object-position: 50% 50%">
       </article>
@@ -322,15 +382,15 @@ dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(
   </div>
 </main>
 <footer
-  class="opacity-80 m-4 min-[375px]:pl-4 md:pl-0 mt-16 w-full mx-auto container lg:max-w-4xl md:max-w-2xl mb-10 flex justify-center">
+  class="opacity-80 pb-10 min-[375px]:pl-4 md:pl-0 mt-16 w-full mx-auto container lg:max-w-4xl md:max-w-2xl flex justify-center">
   <div class="rounded-lg w-full max-w-screen-xl mx-auto md:flex md:items-center md:justify-between py-4"> <span
       class="text-sm sm:text-center text-zinc-800/90 dark:text-zinc-200/90">© 2024 <a href="https://midu.dev/"
-        class="hover:underline">midudev</a>. Casi
+        class="hover:underline">InzTock</a>. Casi
       todos los derechos reservados
     </span>
     <ul class="flex flex-wrap items-center mt-3 text-sm font-medium dark:text-white/90 sm:mt-0">
       <li> <a href="/#sobre-mi" class="hover:underline me-4 md:me-6">Sobre mí</a> </li>
-      <li> <a id="contacto" href="mailto:miduga@gmail.com" class="hover:underline">Contacto</a> </li>
+      <li> <a id="contacto" href="mailto:fredyhurtadofernandez@gmail.com" class="hover:underline">Contacto</a> </li>
     </ul>
   </div>
 </footer>
