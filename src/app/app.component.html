@@ -3,7 +3,8 @@ dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(
 </div>
 
 <header class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2">
-  <nav class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center backdrop-blur-md">
+  <nav
+    class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center backdrop-blur-md">
     <a class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500"
       href="#experiencia">Experiencia</a>
     <a class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500"
@@ -12,11 +13,10 @@ dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(
       mi</a>
     <a class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500" href="#">Contacto</a>
     <div class="relative ml-1 mr-1"> <button id="theme-toggle-btn" (click)="toggleMenu($event)"
-        class="appearance-none border-none flex hover:scale-125 transition"
-        > <span class="sr-only" >Elige el
-          tema</span> <svg id="light" class="theme-toggle-icon size-5 transition-all"
-          width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-          stroke-linecap="round" stroke-linejoin="round" style="scale: 0;">
+        class="appearance-none border-none flex hover:scale-125 transition"> <span class="sr-only">Elige el
+          tema</span> <svg id="light" class="theme-toggle-icon size-5 transition-all" width="24" height="24"
+          viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+          stroke-linejoin="round" style="scale: 0;">
           <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
           <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
           <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
@@ -38,11 +38,14 @@ dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(
         class="absolute hidden scale-80 top-8 right-0 text-sm p-1 min-w-[8rem] rounded-md border border-gray-100 bg-white/90 dark:bg-gray-900/90 dark:border-gray-500/20 shadow-[0_3px_10px_rgb(0,0,0,0.2)] backdrop-blur-md">
         <ul>
           <li
-            class="themes-menu-option px-2 py-1.5 cursor-default hover:bg-neutral-400/40 dark:hover:bg-gray-500/50 rounded-sm" (click)="setTheme('light')"> Light </li>
+            class="themes-menu-option px-2 py-1.5 cursor-default hover:bg-neutral-400/40 dark:hover:bg-gray-500/50 rounded-sm"
+            (click)="setTheme('light')"> Light </li>
           <li
-            class="themes-menu-option px-2 py-1.5 cursor-default hover:bg-neutral-400/40 dark:hover:bg-gray-500/50 rounded-sm" (click)="setTheme('dark')"> Dark </li>
+            class="themes-menu-option px-2 py-1.5 cursor-default hover:bg-neutral-400/40 dark:hover:bg-gray-500/50 rounded-sm"
+            (click)="setTheme('dark')"> Dark </li>
           <li
-            class="themes-menu-option px-2 py-1.5 cursor-default hover:bg-neutral-400/40 dark:hover:bg-gray-500/50 rounded-sm" (click)="setTheme('system')"> System </li>
+            class="themes-menu-option px-2 py-1.5 cursor-default hover:bg-neutral-400/40 dark:hover:bg-gray-500/50 rounded-sm"
+            (click)="setTheme('system')"> System </li>
         </ul>
       </div>
     </div>
@@ -69,8 +72,8 @@ dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(
     </div>
     <h1 class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white">Hola, soy Fredy</h1>
     <p
-      class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300">
-      Tengo 2 año de experiencia.
+      class="mt-6 text-justify text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300">
+      Tengo 2 años de experiencia.
       <strong>
         Egresado de Computacion e Informatica y actualmente estudiante de Ingenieria de Sistemas en la UPC
       </strong>
@@ -126,14 +129,30 @@ dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(
             <div class="relative pb-12 md:col-span-2">
               <div class="sticky top-0">
                 <span class="text-yellow-400 -left-[42px] absolute rounded-full text-5xl">•</span>
-                <h3 class="text-xl font-bold text-yellow-400">Soporte Tecnico</h3>
+                <h3 class="text-xl font-bold text-yellow-400">Analista Junior de Sistemas</h3>
                 <h4 class="font-semibold text-xl text-gray-600 dark:text-white">Battilana Nutricion</h4>
                 <time class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80">Actualmente...</time>
               </div>
             </div>
-            <div class="relative flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3">
-              Hago soporte n1, n2 y n3 a usuarios finales. Desarrollo aplicaciones web tales como Matriz de Articulos
-              SAP y Estados de Proveedores.
+            <div class="relative flex flex-col gap-2 pb-4 text-gray-600 text-justify dark:text-gray-300 md:col-span-3">
+              <ul class="space-y-2">
+                <li>• Desarrollo de la Matriz de Artículos, aplicación web para la gestión de productos, utilizando Java
+                  Spring Boot con arquitectura de capas, aplicando principios de Clean Code y conectada a MySQL Server.
+                  En el frontend, se implementó Angular con Angular Material.</li>
+                <li>
+                  • Implementación de la Gestión de Pagos, una solución basada en arquitectura de microservicios,
+                  desarrollada con Spring Boot, OpenFeign para la comunicación entre servicios y SAP HANA como base
+                  de datos.
+                </li>
+                <li>• Integración de patrones de diseño y buenas prácticas en la construcción de los servicios RESTful
+                  para
+                  mejorar la escalabilidad y mantenibilidad del código.</li>
+                <li>• Optimización de consultas SQL para mejorar el rendimiento de la aplicación y reducir la latencia
+                  en la
+                  carga de datos.</li>
+                <li>• Participación en reuniones de planificación bajo la metodología Scrum, contribuyendo al backlog y
+                  documentando mejoras en la API.</li>
+              </ul>
             </div>
           </div>
         </li>
@@ -148,9 +167,20 @@ dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(
                 <time class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80">Octubre 2023</time>
               </div>
             </div>
-            <div class="relative flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3">
-              Soporte n1,n2 y n3 a usuarios finales. Configuracion de impresoras personales y industriales.
-              Virtualizador de materiales de las aulas virtuales
+            <div class="relative flex flex-col gap-2 pb-4 text-gray-600 text-justify dark:text-gray-300 md:col-span-3">
+              <ul class="space-y-2">
+                <li>• Desarrollo de una plataforma interna para la facultad de Medicina, denominada Ciclo Cero, la cual
+                  permitía
+                  calcular promedios y gestionar notas de alumnos de manera automatizada.</li>
+                <li>• Implementación del backend en Java con Spring Boot, aplicando principios MVC y conectando a MySQL
+                  Server.</li>
+                <li>• Desarrollo del frontend con Thymeleaf, mejorando la experiencia de usuario con JavaScript para
+                  validaciones dinámicas.</li>
+                <li>• Optimización del código y refactorización de la lógica de negocio para mejorar la eficiencia del
+                  procesamiento de datos.</li>
+                <li>• Colaboración con el equipo de TI para la integración de la plataforma con otros sistemas internos.
+                </li>
+              </ul>
             </div>
           </div>
         </li>
@@ -186,7 +216,6 @@ dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(
                 <li> <span class="flex gap-x-2 rounded-full text-xs bg-black text-white py-1 px-2 "> <svg class="size-4"
                       xmlns="http://www.w3.org/2000/svg" width="256" height="256" preserveAspectRatio="xMidYMid"
                       viewBox="0 0 256 256">
-
                       <defs>
                         <linearGradient id="c" x1="55.633%" x2="83.228%" y1="56.385%" y2="96.08%">
                           <stop offset="0%" stop-color="#FFF"></stop>
@@ -270,7 +299,7 @@ dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(
             </div>
           </div>
         </article>
-        <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <article class="hidden flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
           <div class="w-full md:w-1/2">
             <div
               class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
@@ -280,9 +309,8 @@ dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(
             </div>
           </div>
           <!-- Pequeño hidden para ocultar lo que aun no se sabe que agregar-->
-          <div class="hidden w-full md:w-1/2 md:max-w-lg">
-            <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100"> AdventJS - Retos de programación con
-              JavaScript y TypeScript </h3>
+          <div class=" w-full md:w-1/2 md:max-w-lg">
+            <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100"> Muy pronto </h3>
             <div class="flex flex-wrap mt-2">
               <ul class="flex flex-row mb-2 gap-x-2">
                 <li> <span class="flex gap-x-2 rounded-full text-xs bg-black text-white py-1 px-2 "> <svg class="size-4"
@@ -324,10 +352,6 @@ dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(
                       </defs>
                     </svg> Tailwind CSS </span> </li>
               </ul>
-              <div class="mt-2 text-gray-700 dark:text-gray-400">Plataforma gratuita con retos de programación. Más de
-                1
-                millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind
-                CSS.</div>
               <footer class="flex items-end justify-start mt-4 gap-x-4"> <a target="_blank" href="https://adventjs.dev"
                   role="link"
                   class="inline-flex bg-gray-100 text-gray-800 border-gray-300 items-center justify-center gap-2 px-3 py-2 space-x-2 text-base transition dark:text-white dark:bg-gray-800 border dark:border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black">
