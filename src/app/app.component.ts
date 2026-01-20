@@ -22,6 +22,8 @@ export class AppComponent implements OnInit {
     window.addEventListener('scroll', this.onScroll.bind(this));
   }
 
+  
+
   handleClickOutside(event: Event) {
     if (this.themesMenu && !this.themesMenu.nativeElement.contains(event.target)) {
       this.rendered.removeClass(this.themesMenu.nativeElement, 'open');
